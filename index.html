@@ -1,29 +1,37 @@
 
 <html>
 <head>
-	<link href="all.css" media="all" rel="styleshee" type="text/css">
-	<script src=""></script>
-	<script src=""></script>
-	<script src=""></script>
-	<script src=""></script>
-	<script src=""></script>
-	<script src=""></script>
+	<link rel="stylesheet" type="text/css" href="all.css">
 </head>
 <body>
-	<div id="todoapp">
+	<div class="todoapp">
 		<div class="title">
 		</div>
 
 		<div class="content">
-		  <div id="create-to">
-		  <input id="new-todo" placeholder="What needs to be done?" type="text"/>
+		  <input class="new-todo" placeholder="What needs to be done?" type="text"/>
 		</div>
 
-		<div id="todos">
-		  <ul id="todo-list"></ul>
+		<div class="todos">
+		  <ul class="todo-list"></ul>
 		</div>
 	</div>
 
+
+<!-- plugin -->
+<script src="dist/lib/jquery/dist/jquery.js"></script>
+<script src="dist/lib/underscore/underscore.js"></script>
+<script src="dist/lib/backbone/backbone.js" ></script>
+<script src="dist/lib/backbone.localStorage/backbone.localStorage.js"></script>
+
+<!-- backbone  -->
+<script src="src/models/todo.js" ></script>
+<script src="src/collections/todos.js" ></script>
+<script src="src/views/todoView.js" ></script>
+<script src="src/views/appView.js" ></script>
+<script src="src/app.js"></script>
+
+<!-- jquery template  -->
 <script type="text/template" id="item-template" >
 	<div class="todo {{if done}}done{{/if}}">
 	  <div class="display" title="Double click to edit...">

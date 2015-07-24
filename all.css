@@ -1,0 +1,22 @@
+
+body{
+	background-color:#999;
+	margin;0;
+	padding:20px;
+	font:87.5%/1.4 HelveticaNeue,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.todoapp{
+	background-color:#efefef;
+	color:#444;
+	padding:20px;
+	border-radius:5px;
+	box-shadow:inset 2px 1px 4px 1px rgba(0,0,0,0.2);
+}
+
+.new-todo{
+	border-radius:5px;
+	padding:10px;
+	width:100%;
+
+}

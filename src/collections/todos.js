@@ -11,7 +11,7 @@ var app = app || {};
 		
 		//只選出發有已完成的待辦事項
 		done:function(){
-			return this.filter(function(todo){return todo.get('done';)});
+			return this.filter(function(todo){return todo.get('done');});
 		},
 		
 		
@@ -21,6 +21,6 @@ var app = app || {};
 
 	});
 
-	app.todos = new Todos();
+	app.Todos = new Todos();
 
 })();

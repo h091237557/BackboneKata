@@ -20,7 +20,7 @@ var app = app || {};
 		
 		  this.model.bind('change',this.render);
 		  this.model.bind('destroy',this.remove);	
-		}
+		},
 
 		render:function(){
 		  var element = jQuery.tmpl(this.template,this.model.toJSON());
@@ -34,7 +34,7 @@ var app = app || {};
 		
 		edit:function(){
 		  $(this.el).addClass("editing");
-		  this.input.focus()''
+		  this.input.focus();
 		}
 
 

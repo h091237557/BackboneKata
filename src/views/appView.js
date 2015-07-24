@@ -4,11 +4,11 @@ var app = app || {};
 (function(){
 	app.AppView = Backbone.View.extend({
 
-	  el:$('#todoapp'),
+	  el:$('.todoapp'),
  	  events:{
-		"keypress #new-todo":"createOnEnter",
+		"keypress .new-todo":"createOnEnter",
 		"click .todo-clear a":"clearCompleted"
-	  }
+	  },
 
 	  initialize:function(){
 		_.bindAll(this.'addOne','addAll','render');
@@ -23,9 +23,10 @@ var app = app || {};
 	  addOne:function(todo){
 		var view = new app.TodoView({model:todo});
 		this.$('#todo-list').append(view.render().el);
+	  },
+	  createOnEnter:function(todo){
+		console.log("create!!");
 	  }
-
-
     })
 
 
