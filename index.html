@@ -1,0 +1,43 @@
+
+<html>
+<head>
+	<link href="all.css" media="all" rel="styleshee" type="text/css">
+	<script src=""></script>
+	<script src=""></script>
+	<script src=""></script>
+	<script src=""></script>
+	<script src=""></script>
+	<script src=""></script>
+</head>
+<body>
+	<div id="todoapp">
+		<div class="title">
+		</div>
+
+		<div class="content">
+		  <div id="create-to">
+		  <input id="new-todo" placeholder="What needs to be done?" type="text"/>
+		</div>
+
+		<div id="todos">
+		  <ul id="todo-list"></ul>
+		</div>
+	</div>
+
+<script type="text/template" id="item-template" >
+	<div class="todo {{if done}}done{{/if}}">
+	  <div class="display" title="Double click to edit...">
+		<input class="check" type="checkbox" {{if done}}checked="checked"{{/if}}/>
+		<div class="todo-content">${content}</div>
+		<span class="todo-destroy"></span>
+	  </div>
+
+	  <div class="edit">
+		<input class="todo-input" type="text" value="${content}"/>
+	  </div>
+	</div>
+</script>
+
+
+</body>
+</html>

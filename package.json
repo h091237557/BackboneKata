@@ -1,0 +1,26 @@
+{
+  "name": "backbone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/h091237557/BackboneTest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/h091237557/BackboneTest/issues"
+  },
+  "homepage": "https://github.com/h091237557/BackboneTest#readme",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-filter": "^2.0.2",
+    "gulp-util": "^3.0.6",
+    "main-bower-files": "^2.9.0",
+    "rimraf": "^2.4.1"
+  }
+}
