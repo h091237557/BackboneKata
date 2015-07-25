@@ -23,7 +23,7 @@ var app = app || {};
 		},
 
 		render:function(){
-		  var element = jQuery.tmpl(this.template,this.model.toJSON());
+		  var element = jQuery.tmpl($("#item-template").template(),this.model.toJSON());
 		  $(this.el).html(element);
 		  return this;
 		},
@@ -35,7 +35,13 @@ var app = app || {};
 		edit:function(){
 		  $(this.el).addClass("editing");
 		  this.input.focus();
-		}
+		},
+		close:function(){
+		  console.log("close");
+	    },
+		remove:function(){
+		  console.log("remove");
+	    }
 
 
 	});

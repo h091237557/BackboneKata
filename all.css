@@ -1,9 +1,23 @@
 
 body{
+	width:40%;
 	background-color:#999;
 	margin;0;
 	padding:20px;
 	font:87.5%/1.4 HelveticaNeue,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.new-todo{
+	vertical-align:center;
+	border-radius:5px;
+	padding:10px;
+	width:100%;
+}
+
+.edit{
+	display:none;
 }
 
 .todoapp{
@@ -14,9 +28,17 @@ body{
 	box-shadow:inset 2px 1px 4px 1px rgba(0,0,0,0.2);
 }
 
-.new-todo{
-	border-radius:5px;
-	padding:10px;
-	width:100%;
+.todo-list{
+    width:100%;
+	padding:0px;
+	list-style:none;
+}
 
+.todo-list li{
+	margin:20px 0 20px 0 ;
+
+}
+
+.todo-content{
+	display:inline;
 }

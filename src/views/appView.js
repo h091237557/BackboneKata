@@ -11,25 +11,37 @@ var app = app || {};
 	  },
 
 	  initialize:function(){
-		_.bindAll(this.'addOne','addAll','render');
+		_.bindAll(this,'addOne','addAll','render');
 		
-		this.input = this.$('#new-todo');
-		app.todos.bind('add',this.addOne);
-		app.todos.bind('refresh',this.addAll);
+		this.input = this.$('.new-todo');
+		app.Todos.bind('add',this.addOne);
+		app.Todos.bind('refresh',this.addAll);
 
-		app.todos.fetch();
+		app.Todos.fetch();
 	  },
 
 	  addOne:function(todo){
 		var view = new app.TodoView({model:todo});
-		this.$('#todo-list').append(view.render().el);
+		this.$('.todo-list').append(view.render().el);
 	  },
-	  createOnEnter:function(todo){
-		console.log("create!!");
-	  }
-    })
+	  addAll:function(){
+		app.Todos.each(this.addOne);
+	  },
+	  createOnEnter:function(e){
+		if(e.keyCode != 13) return;
+		
+		var value = this.input.val();
+		if(!value) return;
 
+		app.Todos.create({content:value});
+		this.input.val('');
+	  },
+	  clearCompleted:function(){
+		console.log("clean completed!");
+	  },
+	  render:function(){
+		console.log("render!");
+	  }	  
 
-
-
+    });
 })();
