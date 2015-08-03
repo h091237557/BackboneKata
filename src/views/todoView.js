@@ -41,7 +41,10 @@ var app = app || {};
 	    },
 		remove:function(){
 		  console.log("remove");
-	    }
+	    },
+		destroy:function(){
+		  alert(this.model.attributes.content);
+		}
 
 
 	});

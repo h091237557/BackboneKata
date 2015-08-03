@@ -28,6 +28,10 @@ body{
 	box-shadow:inset 2px 1px 4px 1px rgba(0,0,0,0.2);
 }
 
+.todo{
+	position:relative;
+}
+
 .todo-list{
     width:100%;
 	padding:0px;
@@ -35,10 +39,29 @@ body{
 }
 
 .todo-list li{
-	margin:20px 0 20px 0 ;
-
+	margin:10px;
+	height:50px;
+	transition:box-shadow 0.15s;
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+	border-bottom-color:rgb(170,170,170);
+	padding:10px;
+	box-shadow:rgb(85,85,85) 0px 2px 3.333333px;
 }
 
-.todo-content{
-	display:inline;
+
+.todo-list li:hover .todo-destroy{
+	display:block;
 }
+
+.todo-destroy{
+	display:none;
+	position:absolute;
+	right:10px;
+	background-color:#efefef;
+}
+
+.todo-destroy:after {
+    content: 'X';
+}
+
