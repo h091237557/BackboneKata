@@ -40,10 +40,10 @@ var app = app || {};
 		  console.log("close");
 	    },
 		remove:function(){
-		  console.log("remove");
+		  $(this.el).remove();
 	    },
 		destroy:function(){
-		  alert(this.model.attributes.content);
+		  this.model.destroy();	
 		}
 
 
