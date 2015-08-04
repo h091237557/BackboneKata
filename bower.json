@@ -20,5 +20,12 @@
     "backbone.localStorage": "~1.1.16",
     "jquery-tmpl": "*",
     "reset-css": "~2.0.2011012602"
+  },
+  "overrides":{
+	"jquery-tmpl":{
+		"main":[
+		  "**/jquery.tmpl.js"
+		]
+	}
   }
 }

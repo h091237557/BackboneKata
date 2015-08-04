@@ -2,7 +2,6 @@
 body{
 	width:40%;
 	background-color:#999;
-	margin;0;
 	padding:20px;
 	font:87.5%/1.4 HelveticaNeue,"Helvetica Neue",Helvetica,Arial,sans-serif;
 	margin-left:auto;
@@ -30,22 +29,21 @@ body{
 
 .todo{
 	position:relative;
+	line-height:50px;
 }
 
 .todo-list{
     width:100%;
-	padding:0px;
 	list-style:none;
 }
 
 .todo-list li{
-	margin:10px;
 	height:50px;
+	margin:10px auto;
 	transition:box-shadow 0.15s;
 	border-bottom-width:1px;
 	border-bottom-style:solid;
 	border-bottom-color:rgb(170,170,170);
-	padding:10px;
 	box-shadow:rgb(85,85,85) 0px 2px 3.333333px;
 }
 
@@ -55,13 +53,26 @@ body{
 }
 
 .todo-destroy{
-	display:none;
 	position:absolute;
-	right:10px;
+	height:25px;
+	right:0px;
+	top:0px;
+	bottom:0px;
+	margin:auto 10px ;
 	background-color:#efefef;
 }
 
 .todo-destroy:after {
     content: 'X';
 }
+
+.display{
+	height:50px;
+
+}
+
+.check{
+	margin:auto 10px;
+}
+
 
