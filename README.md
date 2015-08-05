@@ -98,7 +98,7 @@ npm install 安裝需要的套件，大部份是安裝gulp需要用的套件。
 	
 ##Step4 建立HTML與CSS
 
-![MacDown Screenshot](https://github.com/h091237557/BackboneTest/img/tolist.png)
+![MacDown Screenshot](https://github.com/h091237557/BackboneTest/blob/master/img/tolist.png)
 
 
 
