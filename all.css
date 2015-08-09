@@ -16,7 +16,25 @@ body{
 }
 
 .edit{
+	height:100%;
+	width:100%;
+	font-size:16px;
 	display:none;
+}
+
+.todo-list li.editing .edit{
+	display:block;	
+}
+
+
+.todo-list li.editing .display{
+	display:none;
+}
+
+.todo-input{
+	width:100%;
+	height:100%;
+	font-size:24px;
 }
 
 .todoapp{
@@ -95,3 +113,8 @@ body{
 .done{
 	text-decoration:line-through;
 }
+
+
+
+
+

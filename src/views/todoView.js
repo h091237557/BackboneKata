@@ -25,6 +25,7 @@ var app = app || {};
 		render:function(){
 		  var element = jQuery.tmpl($("#item-template").template(),this.model.toJSON());
 		  $(this.el).html(element);
+		  this.$input = this.$('.edit').find('input');
 		  return this;
 		},
 
@@ -34,16 +35,22 @@ var app = app || {};
 		
 		edit:function(){
 		  $(this.el).addClass("editing");
-		  this.input.focus();
+		  this.$input.focus();
 		},
-		close:function(){
-		  console.log("close");
+		close:function(e){
+		  this.model.save({content:this.$input.val()});
+		  $(this.el).removeClass("editing");
 	    },
 		remove:function(){
 		  $(this.el).remove();
 	    },
 		destroy:function(){
 		  this.model.destroy();	
+		},
+		updateOnEnter:function(e){
+		  if(e.keyCode == 13){
+			e.target.blur();
+		  }
 		}
 
 
