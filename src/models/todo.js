@@ -6,7 +6,8 @@
 	'use strict';
        app.Todo = Backbone.Model.extend({
            defaults:{
-               done:false
+               done:false,
+			   content:""
            },
  
            toggle:function(){

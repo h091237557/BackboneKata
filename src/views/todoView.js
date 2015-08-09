@@ -28,7 +28,7 @@ var app = app || {};
 		  return this;
 		},
 
-		toggleDone:function(){
+		toggleDone:function(){		  
 		  this.model.toggle();
 		},
 		

@@ -15,7 +15,7 @@ var app = app || {};
 		
 		this.input = this.$('.new-todo');
 		app.Todos.bind('add',this.addOne);
-		app.Todos.bind('refresh',this.addAll);
+		app.Todos.bind('reset',this.addAll);
 
 		app.Todos.fetch();
 	  },
@@ -32,12 +32,14 @@ var app = app || {};
 		
 		var value = this.input.val();
 		if(!value) return;
-
+        
 		app.Todos.create({content:value});
 		this.input.val('');
 	  },
 	  clearCompleted:function(){
-		console.log("clean completed!");
+		_.each(app.Todos.done(),function(todo){
+			todo.destroy();
+		 })		
 	  },
 	  render:function(){
 		console.log("render!");

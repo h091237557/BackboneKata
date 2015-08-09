@@ -96,9 +96,57 @@ npm install 安裝需要的套件，大部份是安裝gulp需要用的套件。
 			.pipe(gulp.dest('./dist/lib'));
 	});
 	
-##Step4 建立HTML與CSS
+##Step 4 建立HTML與CSS
+請多練習html與css結構
 
 ![MacDown Screenshot](https://github.com/h091237557/BackboneTest/blob/master/img/tolist.png)
 
+##Step 5 建立Backbone Model
+建立Todo的Model，其中設置Model的屬性done和方法toggle
 
+	var app = app || {};
 
+	(function(){
+		'use strict';
+       	app.Todo = Backbone.Model.extend({
+          	defaults:{
+             	  done:false
+           	},
+ 
+           	toggle:function(){
+               this.save({
+                   done: !this.get('done')
+               });
+           	}
+       });
+	})();
+
+##Step 6 建立Backbone Collection
+collection
+
+	var app = app || {};
+
+	(function(){
+		'use strict';
+
+		var Todos = Backbone.Collection.extend({
+			model:app.Todo,
+		
+			localStorage: new Backbone.LocalStorage('todos-backbone'),
+		
+			//只選出發有已完成的待辦事項
+			done:function(){
+				return this.filter(function(todo){
+				return	 todo.get('done');});
+			},
+		
+		
+			remaining:function(){
+				return this.without.apply(this,this.done());
+			},
+
+		});
+
+		app.Todos = new Todos();
+
+	})();

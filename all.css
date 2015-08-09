@@ -52,6 +52,11 @@ body{
 	display:block;
 }
 
+.todo-content{
+	font-size:22px;
+}
+
+
 .todo-destroy{
 	position:absolute;
 	height:25px;
@@ -75,4 +80,18 @@ body{
 	margin:auto 10px;
 }
 
+.todo-count{
+	float:left;
+}
 
+.todo-clear{
+	float:right;
+}
+
+.todo-clear a {
+	font-size:16px;
+}
+
+.done{
+	text-decoration:line-through;
+}
